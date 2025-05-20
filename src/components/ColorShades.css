@@ -1,0 +1,85 @@
+.color-shades {
+  margin-bottom: 2rem;
+}
+
+.color-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.color-shades h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.primary-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.color-description {
+  margin: 0.5rem 0 1rem;
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  text-align: left;
+}
+
+.shades-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.shade-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.color-box {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+.color-box.primary-shade {
+  border: 2px solid #007bff;
+}
+
+.primary-star {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  font-size: 1.2em;
+  -webkit-text-stroke: 1px white;
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+}
+
+.shade-label {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: -0.2rem;
+}
+
+.color-code {
+  font-size: 0.75em;
+  color: #999;
+  font-family: monospace;
+} 

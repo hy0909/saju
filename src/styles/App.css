@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.input-section {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.input-section h2 {
+  margin: 0 0 0.75rem 0;
+  color: #333;
+  text-align: left;
+}
+
+.input-section textarea,
+.input-section input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.input-section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-section textarea:focus,
+.input-section input:focus {
+  border-color: #000000;
+  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #00000022;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-section button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.input-section button:hover,
+.input-section button:focus {
+  background-color: #000000;
+  color: white;
+  outline: 2px solid #000000;
+}
+
+.results-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+} 
