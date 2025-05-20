@@ -4,7 +4,7 @@ import './ColorShades.css'
 
 interface ColorShadesProps {
   baseColor: string;
-  colorName: string;
+  // colorName: string; // 사용하지 않으므로 제거
   isPrimary?: boolean;
   description?: string;
 }
@@ -67,7 +67,7 @@ const getColorName = (hex: string): string => {
   return closestColor
 }
 
-const ColorShades: React.FC<ColorShadesProps> = ({ baseColor, colorName, isPrimary, description }) => {
+const ColorShades: React.FC<ColorShadesProps> = ({ baseColor, isPrimary, description }) => {
   const [showToast, setShowToast] = useState(false);
   const colorDisplayName = getColorName(baseColor)
   const shades = generateShades(baseColor).map((color, i) => ({

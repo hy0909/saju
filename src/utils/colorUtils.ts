@@ -195,7 +195,7 @@ export const generateShades = (baseColor: string): string[] => {
     { label: 900, mix: 0.5,  to: 0 },
   ]
 
-  return shadeLevels.map(({ mix: m, to, label }, idx) => {
+  return shadeLevels.map(({ mix: m, to, label }) => {
     if (label === 50) {
       // 더 연한 파란색으로 고정 (Tailwind sky-50)
       return '#f5faff'

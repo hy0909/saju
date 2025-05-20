@@ -30,8 +30,6 @@ const MatchChat: React.FC<MatchChatProps> = ({ user, onBack }) => {
   // 1. 매칭 로직: 내 user.id와 궁합이 잘 맞는(다른) user_fortune을 자동 매칭
   useEffect(() => {
     const fetchMatch = async () => {
-      // 내 일주 계산 (간단 예시)
-      const myDayPillar = user.day_pillar || '경신일주';
       // 궁합이 잘 맞는 일주 리스트 (실제 로직은 추후 확장)
       const bestMatches = ['경신일주', '무신일주', '병신일주', '무술일주', '병오일주'];
       // 최근 입력된 다른 사용자 중 궁합이 맞는 사람 찾기
