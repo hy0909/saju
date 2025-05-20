@@ -59,7 +59,8 @@ const FortuneForm: React.FC<FortuneFormProps> = ({ onComplete }) => {
           <option value="남성">남성</option>
         </select>
         <input type="date" value={birthDate} onChange={e => setBirthDate(e.target.value)} />
-        <input type="time" value={birthTime} onChange={e => setBirthTime(e.target.value)} placeholder="태어난 시(선택)" />
+        <label className="fortune-label" htmlFor="birth-time">시간</label>
+        <input id="birth-time" type="time" value={birthTime} onChange={e => setBirthTime(e.target.value)} placeholder="태어난 시(선택)" />
         <button type="submit" disabled={loading}>{loading ? '저장 중...' : '저장하고 결과 보기'}</button>
         {error && <div className="form-error">{error}</div>}
       </form>
@@ -74,6 +75,16 @@ const FortuneForm: React.FC<FortuneFormProps> = ({ onComplete }) => {
           font-size: 1rem;
           background: #fff;
           color: #222;
+        }
+        .fortune-form input[type="time"]::-webkit-calendar-picker-indicator {
+          filter: invert(1);
+        }
+        .fortune-label {
+          color: #222;
+          font-size: 0.98rem;
+          margin-bottom: -0.5rem;
+          margin-top: -0.5rem;
+          font-weight: 500;
         }
         .fortune-form input::placeholder {
           color: #aaa;
